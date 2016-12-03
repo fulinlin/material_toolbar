@@ -2,7 +2,7 @@ author: "Tobe O <thosakwe@gmail.com>"
 description: "Material toolbar for Angular2."
 homepage: "https://github.com/thosakwe/material_toolbar"
 name: "material_toolbar"
-version: "1.0.0-dev+2"
+version: "1.0.0-dev+3"
 environment:
   sdk: ">=1.19.0"
 dependencies: 
@@ -11,11 +11,3 @@ dependencies:
 dev_dependencies: 
   browser: "^0.10.0+2"
   dart_to_js_script_rewriter: "^1.0.2"
-transformers:
-- angular2:
-    platform_directives:
-    - 'package:angular2/common.dart#COMMON_DIRECTIVES'
-    platform_pipes:
-    - 'package:angular2/common.dart#COMMON_PIPES'
-    entry_points: web/main.dart
-- dart_to_js_script_rewriter
