@@ -1,0 +1,9 @@
+#content {
+    padding: 1em;
+}
+
+material-fab {
+    position: fixed !important;
+    bottom: 1em;
+    right: 1em;
+}
