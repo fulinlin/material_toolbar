@@ -1,8 +1,8 @@
 author: "Tobe O <thosakwe@gmail.com>"
 description: "Material toolbar for Angular2."
-homepage: "https://github.com/thosakwe/material_menu"
+homepage: "https://github.com/thosakwe/material_toolbar"
 name: "material_toolbar"
-version: "1.0.0-dev"
+version: "1.0.0-dev+2"
 environment:
   sdk: ">=1.19.0"
 dependencies: 
