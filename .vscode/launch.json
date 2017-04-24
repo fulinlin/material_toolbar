@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Static Server",
+            "type": "dart-cli",
+            "request": "launch",
+            "program": "${workspaceRoot}/tool/static_server.dart"
+        }
+    ]
+}
