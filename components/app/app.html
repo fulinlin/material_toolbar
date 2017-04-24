@@ -1,0 +1,67 @@
+<material-toolbar [background]="background" [foreground]="foreground" [elevation]="elevation" [icon]="icon"
+                  [title]="title" [middleTitle]="middleText" [bottomTitle]="bottomText" [mediumTall]="size == 'medium'"
+                  [tall]="size == 'tall'">
+    <div class="right-content">
+        <material-button icon>
+            <glyph icon="refresh"></glyph>
+        </material-button>
+        <material-button icon>
+            <glyph icon="add"></glyph>
+        </material-button>
+    </div>
+    <div class="middle-content">
+        <material-input></material-input>
+        <material-button icon>
+            <glyph icon="search"></glyph>
+        </material-button>
+    </div>
+    <div class="bottom-content">
+        <material-button icon>
+            <glyph icon="content_cut"></glyph>
+        </material-button>
+        <material-button icon>
+            <glyph icon="content_copy"></glyph>
+        </material-button>
+        <material-button icon>
+            <glyph icon="content_paste"></glyph>
+        </material-button>
+    </div>
+    <material-progress class="fit" [indeterminate]="true"></material-progress>
+</material-toolbar>
+<material-fab [style.background-color]="background" raised>
+    <glyph icon="search" [style.color]="foreground"></glyph>
+</material-fab>
+<div id="content">
+    <material-radio-group [(ngModel)]="size">
+        <material-radio [checked]="true" value="standard">
+            Standard
+        </material-radio>
+        <material-radio value="medium">
+            Medium-Tall
+        </material-radio>
+        <material-radio value="tall">
+            Tall
+        </material-radio>
+    </material-radio-group>
+    <br/>
+    <material-input floatingLabel label="Title" [(ngModel)]="title"></material-input>
+    <br/>
+    <material-input *ngIf="size == 'medium' || size == 'tall'" floatingLabel label="Middle Text"
+                    [(ngModel)]="middleText"></material-input>
+    <br/>
+    <material-input *ngIf="size == 'tall'" floatingLabel label="Bottom Text" [(ngModel)]="bottomText"></material-input>
+    <br/>
+    <material-input floatingLabel label="Toolbar Icon" [(ngModel)]="icon"></material-input>
+    <br/>
+    <material-input floatingLabel label="Background Color" [(ngModel)]="background"></material-input>
+    <br/>
+    <material-input floatingLabel label="Foreground Color" [(ngModel)]="foreground"></material-input>
+    <br/>
+    <label>Elevation: {{elevation}}</label>
+    <material-button raised primary (click)="up()">
+        <glyph icon="add"></glyph>
+    </material-button>
+    <material-button raised [disabled]="elevation <= 0" (click)="down()">
+        <glyph icon="remove"></glyph>
+    </material-button>
+</div>

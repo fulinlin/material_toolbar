@@ -1,0 +1,93 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "2": [
+          "Component"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/angular_components.dart",
+        "2": [
+          "materialDirectives"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:material_toolbar/material_toolbar.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "AppComponent",
+        "7": [
+          {
+            "2": "materialDirectives"
+          },
+          {
+            "2": "MaterialToolbarComponent"
+          }
+        ]
+      }
+    ],
+    "6": "app.dart",
+    "7": [
+      {
+        "1": "package:angular2/core.template.dart",
+        "4": "i0"
+      },
+      {
+        "1": "package:angular_components/angular_components.template.dart",
+        "4": "i1"
+      },
+      {
+        "1": "package:material_toolbar/material_toolbar.template.dart",
+        "4": "i2"
+      }
+    ]
+  },
+  "type": {
+    "AppComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "example-app",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "AppComponent",
+        "moduleUrl": "asset:material_toolbar/web/components/app/app.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<material-toolbar [background]=\"background\" [foreground]=\"foreground\" [elevation]=\"elevation\" [icon]=\"icon\"\n                  [title]=\"title\" [middleTitle]=\"middleText\" [bottomTitle]=\"bottomText\" [mediumTall]=\"size == 'medium'\"\n                  [tall]=\"size == 'tall'\">\n    <div class=\"right-content\">\n        <material-button icon>\n            <glyph icon=\"refresh\"></glyph>\n        </material-button>\n        <material-button icon>\n            <glyph icon=\"add\"></glyph>\n        </material-button>\n    </div>\n    <div class=\"middle-content\">\n        <material-input></material-input>\n        <material-button icon>\n            <glyph icon=\"search\"></glyph>\n        </material-button>\n    </div>\n    <div class=\"bottom-content\">\n        <material-button icon>\n            <glyph icon=\"content_cut\"></glyph>\n        </material-button>\n        <material-button icon>\n            <glyph icon=\"content_copy\"></glyph>\n        </material-button>\n        <material-button icon>\n            <glyph icon=\"content_paste\"></glyph>\n        </material-button>\n    </div>\n    <material-progress class=\"fit\" [indeterminate]=\"true\"></material-progress>\n</material-toolbar>\n<material-fab [style.background-color]=\"background\" raised>\n    <glyph icon=\"search\" [style.color]=\"foreground\"></glyph>\n</material-fab>\n<div id=\"content\">\n    <material-radio-group [(ngModel)]=\"size\">\n        <material-radio [checked]=\"true\" value=\"standard\">\n            Standard\n        </material-radio>\n        <material-radio value=\"medium\">\n            Medium-Tall\n        </material-radio>\n        <material-radio value=\"tall\">\n            Tall\n        </material-radio>\n    </material-radio-group>\n    <br/>\n    <material-input floatingLabel label=\"Title\" [(ngModel)]=\"title\"></material-input>\n    <br/>\n    <material-input *ngIf=\"size == 'medium' || size == 'tall'\" floatingLabel label=\"Middle Text\"\n                    [(ngModel)]=\"middleText\"></material-input>\n    <br/>\n    <material-input *ngIf=\"size == 'tall'\" floatingLabel label=\"Bottom Text\" [(ngModel)]=\"bottomText\"></material-input>\n    <br/>\n    <material-input floatingLabel label=\"Toolbar Icon\" [(ngModel)]=\"icon\"></material-input>\n    <br/>\n    <material-input floatingLabel label=\"Background Color\" [(ngModel)]=\"background\"></material-input>\n    <br/>\n    <material-input floatingLabel label=\"Foreground Color\" [(ngModel)]=\"foreground\"></material-input>\n    <br/>\n    <label>Elevation: {{elevation}}</label>\n    <material-button raised primary (click)=\"up()\">\n        <glyph icon=\"add\"></glyph>\n    </material-button>\n    <material-button raised [disabled]=\"elevation <= 0\" (click)=\"down()\">\n        <glyph icon=\"remove\"></glyph>\n    </material-button>\n</div>\n",
+        "templateUrl": "asset:material_toolbar/web/components/app/app.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_toolbar/web/components/app/app.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}
