@@ -2,7 +2,7 @@ author: Tobe O <thosakwe@gmail.com>
 description: Material toolbar for Angular2.
 homepage: https://github.com/thosakwe/material_toolbar
 name: material_toolbar
-version: 2.0.1
+version: 2.0.2
 environment:
   sdk: ">=1.23.0-beta"
 dependencies: 

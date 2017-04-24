@@ -85,10 +85,10 @@ class MaterialToolbarComponent implements OnDestroy {
   String icon;
 
   @Input()
-  bool mediumTall;
+  bool mediumTall = false;
 
   @Input()
-  bool tall;
+  bool tall = false;
 
   @Input()
   String title, middleTitle, bottomTitle;

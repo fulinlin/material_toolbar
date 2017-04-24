@@ -12,13 +12,13 @@
                 <ng-content select=".right-content"></ng-content>
             </div>
         </div>
-        <div id="middle" *ngIf="mediumTall || tall">
+        <div id="middle" *ngIf="mediumTall == true || tall == true">
             <div class="title">{{middleTitle}}</div>
             <div class="content">
                 <ng-content select=".middle-content"></ng-content>
             </div>
         </div>
-        <div id="bottom" *ngIf="tall">
+        <div id="bottom" *ngIf="tall == true">
             <div class="title">{{bottomTitle}}</div>
             <div class="content">
                 <ng-content select=".bottom-content"></ng-content>
