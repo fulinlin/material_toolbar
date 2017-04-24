@@ -100,7 +100,7 @@ class MaterialToolbarComponent implements OnDestroy {
       ? 'none'
       : '0 ${elevation}px 6px rgba(0,0,0,0.16), 0 ${elevation}px 6px rgba(0,0,0,0.23)';
 
-  final StreamController<Event> _iconClick = new LazyStreamController<Event>();
+  final StreamController<Event> _iconClick = new LazyStreamController<Event>.broadcast();
 
   @Output()
   Stream<Event> get iconClick => _iconClick.stream;
