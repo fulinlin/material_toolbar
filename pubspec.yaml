@@ -12,10 +12,16 @@ dev_dependencies:
   angel_framework: ^1.0.0
   angel_static: ^1.0.0
   browser: ^0.10.0
+
 transformers:
-- angular2:
+- angular2/transform/codegen:
     platform_directives:
     - 'package:angular2/common.dart#COMMON_DIRECTIVES'
     platform_pipes:
     - 'package:angular2/common.dart#COMMON_PIPES'
+
+# Adding a $include makes this a "dev_transformer", i.e. users that import
+# this package from pub won't get an error saying failed to build web/main.dart.
+- angular2/transform/reflection_remover:
     entry_points: web/main.dart
+    $include: ["web/main.dart"]
